@@ -974,7 +974,7 @@ public class AppOpsManager {
             AppOpsManager.MODE_ASK,     // OP_WRITE_CALL_LOG
             AppOpsManager.MODE_ALLOWED, // OP_READ_CALENDAR
             AppOpsManager.MODE_ALLOWED, // OP_WRITE_CALENDAR
-            AppOpsManager.MODE_ASK,     // OP_WIFI_SCAN
+            AppOpsManager.MODE_ALLOWED,     // OP_WIFI_SCAN
             AppOpsManager.MODE_ALLOWED, // OP_POST_NOTIFICATION
             AppOpsManager.MODE_ALLOWED, // OP_NEIGHBORING_CELLS
             AppOpsManager.MODE_ASK,     // OP_CALL_PHONE
