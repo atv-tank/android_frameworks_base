@@ -436,6 +436,8 @@ public class AudioService extends IAudioService.Stub {
     // Broadcast receiver for device connections intent broadcasts
     private final BroadcastReceiver mReceiver = new AudioServiceBroadcastReceiver();
 
+    private final BroadcastReceiver mAmazonAudioHooks = new AmazonAudioHooks();
+
     /** Interface for UserManagerService. */
     private final UserManagerInternal mUserManagerInternal;
 
@@ -764,6 +766,8 @@ public class AudioService extends IAudioService.Stub {
         }
 
         context.registerReceiverAsUser(mReceiver, UserHandle.ALL, intentFilter, null, null);
+
+        context.registerReceiverAsUser(mAmazonAudioHooks, new IntentFilter(AudioManager.ACTION_HDMI_AUDIO_PLUG));
 
         LocalServices.addService(AudioManagerInternal.class, new AudioServiceInternal());
 
